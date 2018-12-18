@@ -12,5 +12,9 @@ Pod::Spec.new do |s|
   s.ios.frameworks      = ['UIKit', 'CoreML',]
   s.source              = { :git => "https://github.com/metismachine/skafosswift.git", :tag => s.version.to_s }
   s.swift_version       = '4.2'
-  s.vendored_framework  = "skafos.framework"
+  s.source_files        = "Sources/**/*.swift"
+  
+  s.dependency 'Alamofire', '~> 4.0'
+  s.dependency 'GzipSwift'
 end
+
