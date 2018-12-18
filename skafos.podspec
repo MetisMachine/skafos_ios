@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary             = "Swift framework for the Skafos platform"
   s.description         = "Swift platform for interacting with Skafos machine learning platform."
   s.homepage            = "https://metismachine.com"
-  s.license             = { :type => 'Apache 2.0', :file => 'LICENSE.md' }
+  s.license             = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author              = {"Wess Cope" => "wess@metismachine.com"}
   s.platform            = :ios, '12.0'
   s.requires_arc        = true
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.dependency 'Alamofire', '~> 4.0'
   s.dependency 'GzipSwift'
 
-  s.vendored_framework = 'skafos.framework'
+  s.ios.vendored_framework = '**/frameworks/skafos.framework'
 end
 
