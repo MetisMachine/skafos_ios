@@ -1,0 +1,4 @@
+framework module Skafos {
+    header "Skafos-Swift.h"
+    requires objc
+}
