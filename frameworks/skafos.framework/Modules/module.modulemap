@@ -1,4 +1,4 @@
-framework module skafos {
-    header "skafos-Swift.h"
+framework module Skafos {
+    header "Skafos-Swift.h"
     requires objc
 }
