@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   
   s.library = 'z'
 
-  s.ios.vendored_framework = 'frameworks/Skafos.framework'
+  s.vendored_framework = '**/frameworks/Skafos.framework'
 end
 
