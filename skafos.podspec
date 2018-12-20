@@ -13,8 +13,9 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/metismachine/skafosswift.git", :tag => s.version.to_s }
   s.swift_version       = '4.2'
   
-  s.dependency 'Alamofire', '~> 4.0'
+  s.ios.dependency 'Alamofire', '~> 4.0'
+  s.library = 'z'
 
-  s.ios.vendored_framework = '**/frameworks/Skafos.framework'
+  s.ios.vendored_framework = 'frameworks/Skafos.framework'
 end
 
