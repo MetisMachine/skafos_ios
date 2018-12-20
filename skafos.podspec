@@ -15,10 +15,7 @@ Pod::Spec.new do |s|
   
   s.ios.dependency 'Alamofire', '~> 4.0'
   
-  s.library         = 'z'
-  s.user_target_xcconfig = {
-    "HEADER_SEARCH_PATHS": "$(inherited) ${PODS_ROOT}/Skafos/Frameworks"
-  }
+  s.library = 'z'
 
   s.ios.vendored_framework = 'frameworks/Skafos.framework'
 end
