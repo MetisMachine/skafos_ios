@@ -16,8 +16,6 @@ Pod::Spec.new do |s|
   s.ios.dependency 'Alamofire', '~> 4.0'
   
   s.library         = 'z'
-  s.preserve_paths  = 'frameworks/Skafos.framework/Modules/module.modulemap'
-  s.source_files    = 'frameworks/Skafos.framework/Headers/Skafos-Swift.h'
   s.user_target_xcconfig = {
     "HEADER_SEARCH_PATHS": "$(inherited) ${PODS_ROOT}/Skafos/Frameworks"
   }
