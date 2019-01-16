@@ -14,11 +14,9 @@ Pod::Spec.new do |s|
   s.swift_version       = '4.2'
   
   s.ios.dependency 'Alamofire', '~> 4.0'
-  
   s.library = 'z'
-
   s.vendored_framework  = '**/framework/Skafos.framework'
   s.static_framework    = true
-  
+
 end
 

@@ -182,6 +182,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// Skafos framework used for interacting with the Skafos platform
+/// providing background updates and CoreML model loading.
 SWIFT_CLASS("_TtC6Skafos6Skafos")
 @interface Skafos : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
