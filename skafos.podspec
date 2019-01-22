@@ -14,15 +14,9 @@ Pod::Spec.new do |s|
   s.swift_version       = '4.2'
   
   s.ios.dependency 'Alamofire', '~> 4.0'
-  s.library = 'z'
+  
+  s.library             = 'z'
   s.vendored_framework  = '**/frameworks/Skafos.framework'
   s.static_framework    = true
-
-
-  # For Local Development
-  # s.source_files    = "Sources/**/*.swift"
-  # s.dependency 'Alamofire', '~> 4.0'
-  # s.dependency 'GzipSwift'
-  
 end
 
