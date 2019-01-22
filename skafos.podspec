@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform            = :ios, '12.0'
   s.requires_arc        = true
   s.ios.frameworks      = ['UIKit', 'CoreML', 'Foundation']
-  s.source              = { :git => "https://github.com/metismachine/skafosswift.git", :tag => s.version.to_s }
+  s.source              = { :git => "https://github.com/metismachine/skafos_ios.git", :tag => s.version.to_s }
   s.swift_version       = '4.2'
   
   s.ios.dependency 'Alamofire', '~> 4.0'
