@@ -1,3 +1,7 @@
+>
+> PLEASE NOTE: There are breaking changes with the release of 2.0. If continuing use of 1.x, please change your pod file to use: `pod 'Skafos', '1.0.1'` instead of `pod 'Skafos'`
+>
+
 <h1 align="center">SKAFOS</h1>
 
 <p align="center">
@@ -32,7 +36,18 @@ Then configure the framework with your project token:
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
   // ...
 
-  Skafos.configure("YOUR PROJECT TOKEN")
+  // Shorthand:
+  Skafos.initialize("your project token", swizzle: true, debug: true)
+
+  // Longhand:
+  // Skafos.initialize(
+  //   Config(
+  //      token: "your project token",
+  //      meta: ["Any meta data" : "you want"],
+  //      swizzle: (true or false),
+  //      isDev: (true or false)
+  //   ) 
+  // )
 
   // ...
 
@@ -41,6 +56,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 Add push notification handlers and then the Skafos push handlers
+> Note: If you set `swizzle` to `true` this is not needed.
 
 ```swift
 
@@ -67,10 +83,25 @@ Now you are all set to call Skafos and ask it to load your model.
 
 ```swift
 
-Skafos.load(savedModel) { model in
-  guard let model = model else { return }
-  
-  self.classifier.model = model
+Skafos.load("your asset name", version: "Asset version") { (error, asset) in
+  if let error = error {
+    print("Oh man, an error: \(error)")
+
+    return
+  }
+
+  if let model = asset.model {
+    self.classifier.model = model
+  }
+
+  for file in asset.files {
+    print("File name: \(file.name) and path: \(file.path)")
+  }
+
+  // And if you have multiple MLModels you can always loop through those too:
+  for model in asset.models {
+    print("Model name: \(model.name), path: \(model.path), and model itself: \(model.model)")
+  }
 }
 
 ```
