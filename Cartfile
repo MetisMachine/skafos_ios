@@ -1,1 +1,2 @@
 github "alamofire/alamofire" ~> 4.0
+github "weichsel/ZIPFoundation" ~> 0.9.8
