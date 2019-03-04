@@ -83,7 +83,7 @@ Now you are all set to call Skafos and ask it to load your model.
 
 ```swift
 
-Skafos.load(asset: "your asset name", version: "Asset version") { (error, asset) in
+Skafos.load("your asset name", version: "Asset version") { (error, asset) in
   if let error = error {
     print("Oh man, an error: \(error)")
 
