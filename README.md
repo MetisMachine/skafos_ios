@@ -16,7 +16,7 @@ Skafos seeks to free you from the tedious tasks and unnecessary work to just try
 ---
 
 ## Installation
-1. Sign up for Skafos account at [Skafos](https://skafos.io)
+1. Sign up for Skafos account at [Skafos](https://skafos.ai)
 2. Create a ML project using Skafos dashboard at [Quickstart](http://dashboard.metismachine.io/quickstart/project)
 3. Configure your app to use Skafos, including enable background updates via push notifications.
 4. Add `pod 'skafos'` to your `Podfile` and `pod install`
