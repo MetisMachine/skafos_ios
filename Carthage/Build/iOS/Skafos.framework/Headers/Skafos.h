@@ -2,8 +2,8 @@
 //  Skafos.h
 //  Skafos
 //
-//  Created by Wess Cope on 2/19/19.
-//  Copyright © 2019 Skafos.ai. All rights reserved.
+//  Created by Skafos.ai on 3/22/19.
+//  Copyright © 2019 Metis Machine, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
